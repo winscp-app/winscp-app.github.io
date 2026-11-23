@@ -1,0 +1,23 @@
+# Transfer Client Manual
+
+> An independent manual in plain English for WinSCP 6.7.1: what the free client does, how to install it and connect, what it costs, and how it compares with other clients.
+
+Independent guides to WinSCP by Transfer Client Manual. Facts come from the vendor's pages on the date shown on each page.
+
+## Start
+- [WinSCP download: get version 6.7.1 from the official site](https://winscp-app.github.io/download.html): Download WinSCP 6.7.1 from the official site: 13 MB free installer, Windows 7 to 11, what is new in 6.7, portable option and five install steps.
+
+## Decide
+- [WinSCP review: a free Windows SFTP client with real automation](https://winscp-app.github.io/review.html): WinSCP 6.7.1 reviewed from its documentation: interfaces, SFTP, FTP, WebDAV and S3 support, scripting, pros and cons, and who should pick another client.
+- [Is WinSCP free? Licence, Microsoft Store price and donations](https://winscp-app.github.io/is-it-free.html): WinSCP is free and open source, including for business use. What the $19.99 Microsoft Store copy is, donation options, and which terms are not published.
+
+## Do it
+- [How to use WinSCP: connect to an SFTP server and upload files](https://winscp-app.github.io/connect-sftp.html): How to use WinSCP step by step: New Site in the Login dialog, protocol, host and port, saving the site, checking the host key, and uploading with F5 or drag.
+- [WinSCP errors: fixes for connection, host key and transfer problems](https://winscp-app.github.io/errors.html): Fix common WinSCP errors: cannot connect, host key warnings, Received too large SFTP packet, error code 4, Error 127, and scripts failing in Task Scheduler.
+
+## Compare
+- [WinSCP vs FileZilla: which free file transfer client to choose](https://winscp-app.github.io/winscp-vs-filezilla.html): WinSCP vs FileZilla: platforms, SFTP, SCP, WebDAV and S3 support, scripting, editor and price, with a clear rule for which client fits which user.
+- [WinSCP alternatives for Mac, Linux and Windows](https://winscp-app.github.io/alternatives.html): Seven WinSCP alternatives: FileZilla, Cyberduck, MobaXterm, Bitvise, PuTTY, rclone and OpenSSH, with platforms, cost and when each one is the better pick.
+
+## Full text
+- [llms-full.txt](https://winscp-app.github.io/llms-full.txt): every guide on this site in plain markdown

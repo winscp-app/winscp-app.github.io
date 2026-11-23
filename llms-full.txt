@@ -1,0 +1,747 @@
+# Transfer Client Manual: all guides
+
+# WinSCP: what the free Windows file transfer client does and where to get it
+
+URL: https://winscp-app.github.io/index.html
+Updated: 2026-11-24
+
+WinSCP is a free, open source client that moves files between a Windows PC and a remote server over SFTP, SCP, FTP, WebDAV or S3. This manual covers the current 6.7.1 release: how to install it, how to connect, what it costs and how it compares with FileZilla.
+
+## Key facts
+
+- Checked: 2026-11-24
+- Current version: 6.7.1
+- Price: Free, open source
+- Protocols: SFTP, SCP, FTP, FTPS, WebDAV, S3
+- Platform: Windows only
+- Installer: 13 MB
+
+WinSCP is a free, open source file transfer client for Windows. It copies files between your PC and remote servers over SFTP, SCP, FTP, FTPS, WebDAV and Amazon S3. The current stable release is 6.7.1, a 13 MB installer from the official site. There is no paid edition, and a Microsoft Store copy at $19.99 is optional.
+
+## What WinSCP is for
+
+WinSCP is a free Windows program built for one job: copying files between your computer and a remote machine. You open a session to a server, see your local folders and the remote folders side by side or in a window that looks like File Explorer, and move files by dragging them or with a keyboard shortcut. The official introduction calls it an SFTP, FTP, WebDAV, S3 and SCP client, with basic file manager functions on top.
+People turn to it when a web host sends them SFTP or FTP details, when they look after a Linux server from a Windows desk, or when they need to upload to an Amazon S3 bucket without typing commands. It also edits remote files in place with its own text editor, keeps folders in sync, and can run unattended from scripts or from a .NET assembly.
+It runs only on Windows. Development has continued without a break since 2000, and a new release comes out every one to three months.
+
+## Pages in this manual
+
+If you just need the program, start with the [download and install page](download.html). Read the [full review](review.html) to see what it does well and where it falls short. If your company asks whether it may be used at work, read [the licence and price page](is-it-free.html). The [connection guide](connect-sftp.html) goes through the Login dialog one field at a time. The [FileZilla comparison](winscp-vs-filezilla.html) helps if you are choosing between those two, and the [error fixes page](errors.html) covers the messages people search for most.
+- Download: Version 6.7.1, installer size, Windows versions and five setup steps.
+- Review: Interfaces, protocols, scripting, pros and cons, and a score.
+- Is it free: The open source licence, the $19.99 Store copy, donations and what is not published.
+- How to connect: From the Login dialog to your first upload, using the program's own dialog names.
+- vs FileZilla: Platforms, protocols, automation and which one to choose.
+- Alternatives: Seven other clients for Mac, Linux, cloud drives and the command line.
+- Errors: Login failures, host key warnings, the large SFTP packet message and script problems.
+
+## Main features in version 6.7
+
+The feature list in the official documentation is long. These are the parts most readers use day to day.
+- Two interfaces: Commander, with two panels and keyboard control, and Explorer, with a single remote window
+- SFTP and SCP over SSH, FTP with optional TLS encryption (FTPS), WebDAV and Amazon S3
+- Password, keyboard interactive, public key and Kerberos (GSS) authentication, with support for Pageant
+- Integrated text editor for remote files
+- Folder synchronization, a background transfer queue and resuming of interrupted transfers
+- Scripting, a command line interface and a .NET assembly for automation
+- Optional master password for stored sites, and a portable mode that keeps settings in a file instead of the registry
+Version 6.7 adds synchronization between two local folders, support for the OpenSSH authentication agent, better handling of sessions and workspaces, improved dark theme support and an experimental 64 bit build.
+
+## Who should use it and who should not
+
+It suits Windows users who move files to servers they own or rent: web developers, system administrators, and anyone who has been given SFTP credentials by a hosting provider. Scripting and the .NET library come in the same free download, so it also suits teams that automate nightly uploads or reports.
+It does not suit people who need one client on Windows, macOS and Linux, or who want direct connections to consumer cloud drives such as Google Drive or Dropbox. Those readers should compare other clients before they install anything.
+
+## Release and support facts
+
+| Item | Value |
+|---|---|
+| Stable release | 6.7.1 |
+| Installer size | 13 MB |
+| Release rhythm | Every one to three months, since 2000 |
+| Support | Vendor forum, answers in about two business days on average |
+| Licence | Open source, free for any use |
+| Optional purchase | Microsoft Store, $19.99 |
+
+> One free download covers SFTP, FTP, WebDAV and S3 on Windows.
+Scripting and the .NET library are included, with nothing to unlock.
+
+
+## FAQ
+
+**What is WinSCP used for?**
+
+It copies files between a Windows PC and a remote server over SFTP, SCP, FTP, WebDAV or S3. It can also edit remote files, keep folders in sync and run automated transfers from scripts.
+
+**Is WinSCP safe to download?**
+
+The installer on the official site is the vendor's own build of an open source program. Get it from winscp.net rather than a mirror, and click the main download button rather than the advertisements shown on that page.
+
+**Does it work on Mac or Linux?**
+
+No, the program is for Windows only. Mac and Linux users need another client, such as FileZilla or Cyberduck.
+
+**Is there a paid version?**
+
+No. Every feature is in the free download. The Microsoft Store listing costs $19.99 and is another way to get the same program, not an upgrade.
+
+**What is the latest version?**
+
+The current stable release is 6.7.1, checked on 24 November 2026. The vendor ships updates every one to three months.
+
+## Sources
+
+- [WinSCP documentation: introducing WinSCP](https://winscp.net/eng/docs/introduction)
+- [WinSCP official site: home page](https://winscp.net/eng/index.php)
+- [WinSCP documentation: support and releases](https://winscp.net/eng/docs/support)
+
+
+---
+
+# WinSCP download: get version 6.7.1 from the official site
+
+URL: https://winscp-app.github.io/download.html
+Updated: 2026-11-24
+
+The WinSCP download is one 13 MB installer for Windows. It is free, with no trial period and no key. This page lists what version 6.7.1 includes, which Windows versions it runs on, and the setup steps from the vendor's install guide.
+
+## Key facts
+
+- Checked: 2026-11-24
+- Version: 6.7.1
+- Installer size: 13 MB
+- Windows: 7 to 11, Server 2008 to 2025
+- Price: Free, no trial
+- Store copy: $19.99, optional
+
+Download WinSCP from its official download page. The current file is version 6.7.1, a 13 MB installer for Windows 7 and newer. It is free, open source software, so there is no trial, licence key or paid upgrade. The same program is also sold in Microsoft Store for $19.99 if you want to support the developer.
+
+## What you get
+
+The WinSCP download button on the vendor's page currently gives you version 6.7.1 as one installation package of about 13 MB. The download counter for this build started on 11 November 2026. The package installs the whole program: the graphical client, the command line and scripting tools, and the integrated editor. No feature is held back for a licence.
+The download page shows advertisements. Click the button that names the version and size (Download WinSCP 6.7.1, 13 MB), not an advert that looks like a download button. Other packages, such as the portable version, are listed under Other Downloads on the same page.
+
+## What is new in 6.7
+
+The vendor calls 6.7 a major update. Its main changes:
+- Synchronization of two local folders
+- Support for the OpenSSH authentication agent
+- Better handling of sessions and workspaces
+- Improved dark theme support
+- An experimental 64 bit build
+The support page names 6.7.1 as the release that is currently maintained. The [review](review.html) explains how these changes fit with the rest of the program.
+
+## System requirements
+
+| Requirement | Value |
+|---|---|
+| Windows desktop | Windows 7 and newer, up to Windows 11 |
+| Windows Server | 2008 and newer, up to Server 2025 |
+| Windows 7 or Server 2008 R2 | Installer needs Service Pack 1; the portable build runs without it |
+| Windows XP, Vista | Not supported by current releases |
+| macOS, Linux | No native version |
+| 64 bit build | Experimental since 6.7 |
+
+## Install in five steps
+
+These steps follow the vendor's install guide for a standard setup.
+1. Run the installer: Double click the downloaded file. If Windows asks for permission, allow it.
+2. Pick a language and accept the licence: If your Windows language is not offered, choose another one. Then click Accept on the License Agreement screen.
+3. Choose the setup type: Select Typical installation for a standard setup.
+4. Pick an interface: On Initial User Settings, choose Commander interface (two panels, like Total Commander) or Explorer interface (one remote window, like File Explorer).
+5. Install: Check the summary on Ready to Install and click Install. Restart File Explorer or Windows if asked. Until you do, some shell features may not work.
+Once it is installed, the [connection guide](connect-sftp.html) shows how to open your first session.
+
+## Microsoft Store and portable options
+
+The install guide says the program is also in Microsoft Store for $19.99. It is the same program as the free download. Paying there is a way to fund development, and the Store looks after updates. The [licence and price page](is-it-free.html) explains what you may do with the free copy, including at work.
+If you are not allowed to install software, use the portable package. It keeps settings in a configuration file instead of the registry, so it can run from a USB drive or from a folder you control.
+
+
+## FAQ
+
+**Is the WinSCP download free?**
+
+Yes. The installer from the official site is the full program, with no trial, key or time limit. The optional Microsoft Store copy costs $19.99.
+
+**How big is the installer?**
+
+The 6.7.1 installer is about 13 MB. The portable package is listed under Other Downloads on the same page.
+
+**Is there a 64 bit version?**
+
+Version 6.7 added an experimental 64 bit build. The standard installer is still the main download.
+
+**Can I use it without installing?**
+
+Yes. The portable package stores its settings in a file instead of the registry, so it can run from removable media or a user folder.
+
+**Does it run on Windows 11?**
+
+Yes. Current releases support Windows 7 and newer, up to Windows 11 and Windows Server 2025.
+
+**What if the installer will not start on Windows 7?**
+
+The installer needs Service Pack 1 on Windows 7 and Server 2008 R2. Install the service pack or use the portable build. If a problem appears later, when you connect, the [error fixes](errors.html) cover the common messages.
+
+## Sources
+
+- [WinSCP documentation: introduction and current version](https://winscp.net/eng/docs/introduction)
+- [WinSCP documentation: support and release schedule](https://winscp.net/eng/docs/support)
+
+
+---
+
+# WinSCP review: a free Windows SFTP client with real automation
+
+URL: https://winscp-app.github.io/review.html
+Updated: 2026-11-24
+
+This WinSCP review looks at version 6.7.1: the two interfaces, the supported protocols, the editor, synchronization and scripting, and the limits that matter most, chiefly that it runs only on Windows. The facts come from the vendor's documentation, checked on 24 November 2026.
+
+## Key facts
+
+- Score: 8.6 / 10
+- Price: Free, open source
+- Version: 6.7.1
+- Platform: Windows only
+- Automation: Scripting, command line, .NET
+- Support: Forum, about 2 business days
+
+WinSCP earns 8.6 out of 10. It is the most complete free SFTP and FTP client for Windows. It also covers SCP, WebDAV and S3, and scripting and a .NET library are included at no cost. It loses points because it runs only on Windows, its download page shows advertisements, and it cannot connect to consumer cloud drives.
+
+## Verdict (8.6/10)
+
+For anyone on Windows who moves files to servers, this is the default choice. It is free, it has been maintained since 2000, and once you need scripting it goes further than most paid clients. Choose something else only if you need macOS or Linux, or a connection to consumer cloud drives.
+
+## WinSCP review in brief
+
+This WinSCP review is based on the vendor's documentation, release notes and support pages. It does not include benchmark tests. The program has been updated without a break since 2000, with a new release every one to three months, and 6.7.1 is the maintained stable build. It is free under an open source licence, and the counter on the official site shows more than 279 million downloads.
+In short, the client does the core job of file transfer well and adds automation that competitors charge for. Its limits concern platform and scope, not quality. If you only need the installer, go to the [download page](download.html).
+
+## Interface and everyday use
+
+During setup you choose between two layouts. Commander shows the local and remote folders in two panels and suits people who like the keyboard and are used to Total Commander or Norton Commander. Explorer shows one remote window that behaves like File Explorer, so you drag files in from your desktop. You can switch layouts later.
+The program works with Windows in the expected ways: drag and drop, URLs, desktop shortcuts and jump list entries. Workspaces reopen a set of sessions together, and a transfer queue runs large jobs in the background while you keep browsing. The integrated editor opens remote files and uploads them again when you save. It is a plain editor; the vendor's FAQ even has an entry asking for syntax highlighting. You can set an external editor instead.
+Setting up a first session takes a few fields in the Login dialog. The [connection guide](connect-sftp.html) goes through them in order.
+
+## Protocols and security
+
+The client handles SFTP and SCP over SSH, plain FTP and FTP with TLS encryption, WebDAV, and Amazon S3. For a web host or a Linux server, SFTP is the protocol you will use most often. S3 support means you can browse a bucket like a folder without the AWS command line.
+It supports password, keyboard interactive, public key and Kerberos (GSS) login. It works with Pageant, the PuTTY authentication agent, and version 6.7 adds the OpenSSH agent as well. Site settings can be shared with PuTTY. Stored sites can be locked behind a master password. The feature index also lists file encryption, connection tunneling through an intermediate host, and administrative restrictions that IT teams can use to lock down options.
+
+## Scripting and automation
+
+This is where it pulls ahead of most free clients. The same download includes a scripting language, a command line interface and a .NET assembly that can be called from PowerShell or C#. Folder synchronization can run semi automatically or fully automatically, and logging includes an XML format that other tools can parse. Transfers resume after a dropped connection.
+Scripts can fail when they run under Task Scheduler instead of in your own session. The vendor's FAQ covers that case in detail, and the [error fixes page](errors.html) summarizes it.
+
+## Feature summary
+
+- Two interfaces: Commander with two panels, or Explorer with one window.
+- Six protocols: SFTP, SCP, FTP, FTPS, WebDAV, Amazon S3.
+- Editor: Edit remote files in place; saving uploads them.
+- Synchronization: Compare and sync folders, including two local folders since 6.7.
+- Automation: Scripts, command line switches and a .NET assembly.
+- Portable: Settings in a file instead of the registry, for USB use.
+
+## Pros and cons
+
+Pros:
+- Free, with no paid tier and no locked features
+- Wide protocol range, including S3 and WebDAV
+- Scripting, command line and .NET assembly included
+- Portable mode and an optional master password
+- Frequent releases and a forum answered by the developers
+Cons:
+- Windows only
+- Advertisements around the download button on the official site
+- No connections to Google Drive, Dropbox or OneDrive
+- Plain integrated editor without syntax highlighting
+- 64 bit build is still experimental
+
+## How it compares
+
+Against FileZilla the main difference is scope. The free FileZilla client runs on more systems, while this program gives Windows users more protocols and automation at no cost. The [comparison of WinSCP and FileZilla](winscp-vs-filezilla.html) sets the two side by side. If you need macOS, Linux or cloud drives, [the alternatives list](alternatives.html) covers seven other clients. If cost or business use is your question, the [licence page](is-it-free.html) explains why there is nothing to buy.
+
+
+## FAQ
+
+**Is WinSCP safe to use?**
+
+It is open source, maintained by its developers and updated every one to three months. Download it only from the official site. Prefer SFTP or FTPS to plain FTP, because plain FTP sends passwords without encryption.
+
+**Is it good for beginners?**
+
+Yes, if you pick the Explorer interface during setup. It looks like a File Explorer window, and you drag files in and out of the server.
+
+**Does it support Amazon S3?**
+
+Yes. S3 is one of the file protocols in the Login dialog, next to SFTP, SCP, FTP and WebDAV. You can browse a bucket and transfer files like any other remote folder.
+
+**Can it sync folders automatically?**
+
+Yes. It can synchronize a local and a remote folder, keep a remote folder up to date while you work, and run synchronization from a script on a schedule.
+
+**Who answers support questions?**
+
+The development team watches the support forum. The vendor says posts that follow its reporting guidelines get an answer within two business days on average. No paid support plan is listed on the support page.
+
+## Sources
+
+- [WinSCP documentation: introducing WinSCP](https://winscp.net/eng/docs/introduction)
+- [WinSCP documentation: feature index](https://winscp.net/eng/docs/feature_index)
+- [WinSCP documentation: support and releases](https://winscp.net/eng/docs/support)
+- [WinSCP documentation: FAQ](https://winscp.net/eng/docs/faq)
+
+
+---
+
+# Is WinSCP free? Licence, Microsoft Store price and donations
+
+URL: https://winscp-app.github.io/is-it-free.html
+Updated: 2026-11-24
+
+Yes, WinSCP is free. The full program costs nothing to download or use, at home or at work. This page explains the open source licence, what the $19.99 Microsoft Store copy is, the donation amounts, and what the vendor does not publish.
+
+## Key facts
+
+- Checked: 2026-11-24
+- Official download: $0
+- Microsoft Store: $19.99, optional
+- Donations: $19 to $249
+- Licence: GNU GPL, open source
+- Paid tiers: None
+
+WinSCP is free and open source. Every feature is in the standard download, with no trial and no paid tier. The vendor also sells the same program in Microsoft Store for $19.99 and accepts donations from $19 to $249; both are optional ways to fund development. The pages checked publish no refund policy.
+
+## Is WinSCP free for personal and business use?
+
+Is WinSCP free? Yes, for everyone. The program is released under the GNU General Public License, which lets anyone run it for any purpose at no charge. That covers individuals, schools, small firms and large companies alike. You do not have to register, accept a trial or enter a key.
+Companies often ask anyway, because their software policy wants a licence count. The vendor's FAQ has an entry for exactly that question. With an open source licence there is nothing to count. What your policy may still care about is where the installer comes from, so take it from the official [download page](download.html) and not from a mirror.
+
+## Every way to get it and what it costs
+
+There are three ways to get the program or pay for it. None of them changes what the program can do.
+| Option | Price | What you get |
+|---|---|---|
+| Official download | $0 | The full program, updates, every protocol and scripting |
+| Microsoft Store | $19.99 one time | The same program, installed and updated through the Store |
+| Donation | $19, $29, $49, $99 or $249 | Supports development; no extra features |
+Prices were read on winscp.net on 24 November 2026. The Store price can change, and Microsoft may show it in your local currency.
+
+## What the Microsoft Store copy is
+
+The install guide lists Microsoft Store as a second source at $19.99. The vendor's Store page says the Store copy is built from the same files as the classic installer and suggests buying it as a form of donation. Some people prefer it because the Store installs updates on its own and keeps a purchase record that an expense report can use.
+It adds no features. If you have already installed the free version, buying the Store copy gives you nothing new apart from Store updates and the feeling of having paid for a tool you use every day.
+
+## Donations
+
+Most documentation pages show a Donate box with five amounts: $19, $29, $49, $99 and $249. A donation unlocks nothing; it pays for continued development. The vendor points out that releases have come every one to three months since 2000, and that the developers have answered the support forum since 2002.
+
+## What the vendor does not publish
+
+Because the program is free, several things that pricing pages usually list are missing. Before you buy the Store copy or donate, note the following:
+- No refund policy appears on the pages checked. A Store purchase is handled by Microsoft under its own terms.
+- No paid support contract or service level is listed. Support is the public forum.
+- No enterprise or volume edition exists, so there is no price list for one.
+- No coupon or discount is listed, and none is needed for a free program.
+
+## Is it worth paying for?
+
+You never have to pay. Buy the Store copy or donate if the program saves you time and you want it to keep getting updates. If you are comparing it with paid tools, note that FileZilla keeps S3 and WebDAV for its paid Pro edition; the [WinSCP and FileZilla comparison](winscp-vs-filezilla.html) has the details. For a judgement on quality rather than price, read the [review](review.html). If you need a client on another platform, see the [alternatives](alternatives.html).
+
+
+## FAQ
+
+**Can I use WinSCP at work for free?**
+
+Yes. The GNU General Public License lets anyone run the program for any purpose, including commercial work, without paying. There is no business edition and no per seat fee.
+
+**What does the $19.99 Microsoft Store version add?**
+
+No features. The vendor describes it as the same program and suggests the purchase as a way to donate. The only practical difference is that the Store installs updates for you.
+
+**Is there a WinSCP coupon or discount?**
+
+No coupon is needed, because the program is free. The only paid option is the Store copy at a fixed $19.99, and the vendor pages checked list no discounts.
+
+**Can I get a refund for the Store purchase?**
+
+The vendor's pages checked here do not publish a refund policy. The purchase goes through Microsoft, so any request falls under Microsoft's Store terms.
+
+**Do donations unlock anything?**
+
+No. Every feature is already in the free download. Donations from $19 to $249 only fund development.
+
+**Is the .NET assembly free too?**
+
+Yes. It ships in the same free download. It has its own licence terms, so check the licence page before you bundle it with software you distribute.
+
+## Sources
+
+- [WinSCP documentation: introduction, open source status](https://winscp.net/eng/docs/introduction)
+- [WinSCP documentation: FAQ, licences question](https://winscp.net/eng/docs/faq)
+- [WinSCP documentation: support and releases](https://winscp.net/eng/docs/support)
+
+
+---
+
+# How to use WinSCP: connect to an SFTP server and upload files
+
+URL: https://winscp-app.github.io/connect-sftp.html
+Updated: 2026-11-24
+
+To learn how to use WinSCP you need three things from your host: a host name, a user name, and a password or key. This guide goes from the Login dialog to your first upload, using the dialog and button names the program shows.
+
+## Key facts
+
+- Checked: 2026-11-24
+- Start in: Login dialog
+- SFTP and SCP port: 22 by default
+- FTP port: 21 by default
+- Save a site: Save button in Login
+- Upload: Drag and drop or F5
+
+To use WinSCP, open it, select New Site in the Login dialog, choose SFTP as the file protocol, and enter the host name, user name and password. Then click Login. The first time you connect, check the server's host key fingerprint and accept it. To upload, drag files from the local panel to the remote panel, or select them and press F5.
+
+## What you need before you start
+
+Most questions about how to use WinSCP come down to missing connection details, so collect them first. The vendor's FAQ makes clear that the user name and password come from whoever runs the server, and that the developers cannot reset them for you. If the program is not installed yet, get it from the [download page](download.html).
+- Host name or IP address of the server
+- Protocol and port: SFTP on port 22 is the most common, FTP uses port 21
+- User name
+- Password, or a private key file if the server uses key login
+- The server's host key fingerprint, from your administrator or hosting provider
+
+## Connect step by step
+
+1. Open the Login dialog: Start the program. The Login dialog opens on its own. If you are already connected, open it again with the New Session command.
+2. Select New Site: In the tree on the left, select New Site. The fields on the right are now empty and ready for a new connection.
+3. Choose the file protocol: In File protocol, choose SFTP for an SSH server, or SCP, FTP, WebDAV or Amazon S3. For FTP with TLS, also set Encryption. Port number fills in automatically: 22 for SFTP and SCP, 21 for FTP.
+4. Enter host and credentials: Type the Host name, User name and Password. For key login, leave Password empty, click Advanced, open SSH > Authentication and select your private key file.
+5. Save the site: Click Save and give the site a name so you do not have to type the details again. You can choose to save the password; stored sites can be protected with a master password.
+6. Log in and check the host key: Click Login. On the first connection the program warns that the server is unknown and shows its host key fingerprint. Compare it with the one your administrator gave you, then accept it so the key is stored for next time.
+
+## Upload and download files
+
+In the Commander interface your computer is in the left panel and the server is in the right panel. Select files on the left and press F5, or drag them across. An upload dialog shows the target folder and transfer settings. Click OK to start. To download, do the same from the right panel to the left.
+In the Explorer interface you drag files from File Explorer or the desktop into the remote window, and drag files out of it to download them. Either way, large jobs can go to the transfer queue and run in the background. An interrupted transfer resumes instead of starting again. The program picks binary or text mode for you, and you can change it in the transfer settings.
+
+## Edit and synchronize
+
+To change a file on the server, select it and press F4 (Edit). It opens in the integrated editor, and saving uploads the new version. You can choose an external editor in the preferences if you prefer your own.
+To mirror a folder, use Commands > Synchronize. You can choose the direction: local, remote or both. To upload changes as you save them while you work, use Commands > Keep Remote Directory up to Date. The vendor's FAQ explains each direction option.
+
+## Next step: automate it
+
+Once a site works in the graphical client, you can turn it into a script. In the Login dialog, Manage > Generate Session URL/Code writes the connection as a session URL, a script line or .NET code that you can paste into a batch file or PowerShell. The scripting tools and the .NET assembly are part of the same free licence, as the [licence page](is-it-free.html) explains.
+If the connection fails at any point, the [error fixes page](errors.html) covers login failures, host key warnings and script problems. For an overall view of what else the program can do, read the [review](review.html).
+
+
+## FAQ
+
+**Which port does WinSCP use for SFTP?**
+
+Port 22 by default, the standard SSH port. Some hosts run SSH on a different port; if so, enter the number your host gives you in the Port number field.
+
+**How do I save the password for a site?**
+
+Click Save in the Login dialog and tick the option to save the password. Set a master password in the preferences if other people use the same Windows account.
+
+**Where do I get the host key fingerprint?**
+
+Ask the server administrator or look in your hosting provider's control panel or documentation. Compare it with the fingerprint the program shows before you accept it.
+
+**Can I connect to an FTP server?**
+
+Yes. Choose FTP in File protocol. If the server supports TLS, also set Encryption, so the password and files are not sent in plain text.
+
+**Why does it keep asking for my password?**
+
+Either the password was not saved with the site, or the prompt is for the passphrase of your private key. Load the key into Pageant, or into the OpenSSH agent since version 6.7, so you type the passphrase only once per Windows session.
+
+**Can I transfer files directly between two servers?**
+
+Not directly; files pass through your PC. Download from the first server and upload to the second, or run a copy command on one of the servers if you have shell access.
+
+## Sources
+
+- [WinSCP documentation: FAQ on connecting and transferring](https://winscp.net/eng/docs/faq)
+- [WinSCP documentation: introduction, protocols and authentication](https://winscp.net/eng/docs/introduction)
+- [WinSCP documentation: feature index](https://winscp.net/eng/docs/feature_index)
+
+
+---
+
+# WinSCP vs FileZilla: which free file transfer client to choose
+
+URL: https://winscp-app.github.io/winscp-vs-filezilla.html
+Updated: 2026-11-24
+
+WinSCP vs FileZilla comes down to platform and depth. Both are free and handle SFTP and FTP. One runs only on Windows and adds SCP, WebDAV, S3 and scripting at no cost. The other runs on Windows, macOS and Linux and keeps cloud protocols for its paid Pro edition.
+
+## Key facts
+
+- Checked: 2026-11-24
+- Price: Both free; FileZilla Pro is paid
+- Platforms: Windows only vs Windows, macOS, Linux
+- SCP: Yes vs no
+- S3 and WebDAV: Free vs Pro only
+- Scripting: Yes vs not in the free client
+
+Pick WinSCP if you are on Windows and want SCP, WebDAV, S3, scripting or a .NET library without paying. Pick FileZilla if you need the same client on macOS or Linux, or a single window that does FTP and SFTP and nothing more. In FileZilla, S3 and WebDAV come only with the paid Pro edition.
+
+## WinSCP vs FileZilla in short
+
+In the WinSCP vs FileZilla choice, both clients are free, open source and mature, and both cover the everyday case: uploading a website over SFTP or FTP. They differ in two ways. FileZilla Client runs on Windows, macOS and Linux. The Windows only client gives you more protocols and full automation in its free download.
+If everyone on your team uses Windows, the extra protocols and scripting usually decide it. If your team mixes systems and wants one tool and one set of instructions, FileZilla's reach usually wins.
+
+## Feature table
+
+| Feature | WinSCP 6.7.1 | FileZilla Client |
+|---|---|---|
+| Price | Free, open source | Free, open source (Pro is paid) |
+| Windows | Yes | Yes |
+| macOS, Linux | No | Yes |
+| SFTP, FTP, FTPS | Yes | Yes |
+| SCP | Yes | No |
+| WebDAV, Amazon S3 | Yes | Pro edition only |
+| Scripting and command line | Yes, plus a .NET assembly | Not in the free client |
+| Integrated text editor | Yes | Uses an external editor |
+| Layout | Commander (two panels) or Explorer | One window with local and remote trees |
+| Pageant key agent | Yes | Yes |
+The first column comes from the vendor's documentation, checked on 24 November 2026. The FileZilla column reflects the FileZilla project's public description of its free client and Pro edition. This page did not record a FileZilla Pro price, so check it on FileZilla's own site.
+
+## Protocols and cloud storage
+
+For SFTP and FTP over TLS the two are equal in practice: both connect, list folders, transfer and resume. The difference starts at the edges. SCP is still the only option on some older or locked down SSH servers, and only the Windows client offers it. WebDAV and Amazon S3 come free in the Windows client, while FileZilla puts them, along with its consumer cloud connectors, in the paid Pro edition.
+So if your job includes an S3 bucket and you do not want to pay, the Windows client is the cheaper route. If you need Google Drive or Dropbox, neither free client covers you, and the [alternatives page](alternatives.html) lists tools that do.
+
+## Automation and power use
+
+This is the widest gap. The Windows client ships with a scripting language, command line switches and a .NET assembly, so a nightly upload can run from Task Scheduler or PowerShell. Folder synchronization can run from the interface or from a script, and logs can be written as XML. The free FileZilla Client is built for interactive use and has no scripting of its own.
+Smaller power features follow the same pattern: an integrated editor, settings shared with PuTTY, an optional master password, a portable mode, and administrative restrictions for managed PCs.
+
+## Platform and interface
+
+FileZilla's single window, with a local tree, a remote tree and a queue at the bottom, looks the same on every system. That helps when one guide has to serve Windows and Mac users. The Windows client asks you to choose a layout at install: Commander, with two panels, or Explorer, which behaves like a File Explorer window. Both are easy to learn, and the [connection guide](connect-sftp.html) uses the dialog names you will see.
+If you are moving from FileZilla, you do not have to retype your sites. The Login dialog has an import tool (Tools > Import Sites) that reads FileZilla's site manager, among other sources.
+
+## Which one to choose
+
+Neither costs anything for the core job. The paid parts are FileZilla Pro on one side and an optional $19.99 Microsoft Store copy on the other; the [licence page](is-it-free.html) explains that the Store copy adds no features. When you have decided, the [download page](download.html) has the current installer and setup steps.
+- Windows only, needs SCP, S3 or WebDAV at no cost: the Windows client
+- Wants scripted or scheduled transfers: the Windows client
+- Mixed Windows, macOS and Linux team: FileZilla
+- Needs Google Drive, Dropbox or OneDrive: neither free client; see the alternatives
+- Just uploads a website over SFTP now and then: either works
+
+
+## FAQ
+
+**Is WinSCP better than FileZilla?**
+
+On Windows it does more for free: SCP, WebDAV, S3, scripting and a .NET library. FileZilla is the better pick when you need the same client on macOS or Linux.
+
+**Is FileZilla safer than WinSCP?**
+
+Both support encrypted connections over SFTP and FTPS, which is what matters most. Use SFTP when the server allows it, and download either program only from its official site.
+
+**Can I import FileZilla sites into WinSCP?**
+
+Yes. In the Login dialog, Tools > Import Sites reads the FileZilla site manager, so your saved servers carry over. Check the imported password and key settings before you first connect.
+
+**Does WinSCP run on Mac like FileZilla?**
+
+No. It is a Windows program. Mac users usually choose FileZilla or Cyberduck.
+
+**Which one handles Amazon S3 for free?**
+
+The Windows client: S3 is a standard file protocol in its free download. In FileZilla, S3 support is part of the paid Pro edition.
+
+## Sources
+
+- [WinSCP documentation: introduction, protocols and features](https://winscp.net/eng/docs/introduction)
+- [WinSCP documentation: feature index](https://winscp.net/eng/docs/feature_index)
+- [WinSCP official site: supported protocols](https://winscp.net/eng/index.php)
+
+
+---
+
+# WinSCP alternatives for Mac, Linux and Windows
+
+URL: https://winscp-app.github.io/alternatives.html
+Updated: 2026-11-24
+
+Most people look for WinSCP alternatives for one of three reasons: they are not on Windows, they need cloud drives, or they want a terminal in the same tool. Here are seven options and what each one changes.
+
+## Key facts
+
+- Checked: 2026-11-24
+- Closest match: FileZilla
+- Best for Mac: Cyberduck or FileZilla
+- Terminal plus transfer: MobaXterm, Bitvise SSH Client
+- Command line: rclone, OpenSSH, PuTTY tools
+- Cost: All have a free option
+
+The closest WinSCP alternative is FileZilla, which is free and runs on Windows, macOS and Linux. Cyberduck suits Mac users and cloud storage. MobaXterm and Bitvise SSH Client combine a terminal with file transfer on Windows, and rclone or the OpenSSH tools in Windows cover command line work. If you are on Windows and only need SFTP, FTP, WebDAV or S3, the original is still the strongest free choice.
+
+## Why look for an alternative
+
+Searches for WinSCP alternatives usually have a concrete cause. The program is Windows only, so a move to a Mac or a Linux desktop forces a change. It speaks SFTP, SCP, FTP, WebDAV and S3 but not consumer cloud drives such as Google Drive or Dropbox. And it is a file transfer client, not a terminal, although it shares settings with PuTTY to cover that gap.
+If none of these applies to you, there is little reason to switch. The [review](review.html) explains why it scores 8.6 out of 10 for Windows users.
+
+## Seven alternatives and what they change
+
+| Client | Platforms | Cost | Choose it when |
+|---|---|---|---|
+| FileZilla | Windows, macOS, Linux | Free; Pro is paid | You want one graphical client on several systems |
+| Cyberduck | macOS, Windows | Free, donations welcome | You are on a Mac or use many cloud storage services |
+| MobaXterm | Windows | Free Home edition; Professional is paid | You want an SSH terminal with an SFTP browser next to it |
+| Bitvise SSH Client | Windows | Free | You want terminal, SFTP and tunneling in one installer |
+| PuTTY (PSCP, PSFTP) | Windows, Unix | Free | You need small command line tools for scripted copies |
+| rclone | Windows, macOS, Linux | Free | You sync to cloud drives and S3 from the command line |
+| OpenSSH client in Windows | Windows 10 and 11 | Free, part of Windows | You only need the sftp and scp commands, with nothing to install |
+
+## If you are on a Mac or Linux
+
+FileZilla is the nearest match: free, with local and remote folders side by side, and the same layout on every system. The [comparison with FileZilla](winscp-vs-filezilla.html) shows what you gain and lose. Its S3 and WebDAV support is in the paid Pro edition.
+Cyberduck is the common choice on a Mac. It opens SFTP, FTP, WebDAV, S3 and several cloud storage services in one browser window. On Linux, the standard file managers in GNOME and KDE can open sftp:// addresses directly, which covers occasional transfers without extra software.
+
+## If you stay on Windows
+
+MobaXterm and Bitvise SSH Client are for people who spend most of their time in a terminal. Both open an SSH shell with a file browser beside it, so you can run a command and drag a file in the same tool. MobaXterm's free Home edition has limits that its paid Professional edition removes. Bitvise's client is free.
+For scripts, PuTTY's PSCP and PSFTP and the OpenSSH sftp and scp commands built into Windows 10 and 11 are lightweight options. Note that the original client already has its own scripting language and a .NET assembly, and works with PuTTY's Pageant agent. Many administrators therefore keep it and add a terminal rather than replace it.
+
+## If you need cloud drives
+
+The original client supports Amazon S3 but not Google Drive, OneDrive or Dropbox. Cyberduck covers several of those services in a graphical window. rclone covers many more from the command line and is the usual choice for scheduled cloud syncs. FileZilla Pro adds cloud connectors for a fee.
+
+## When to keep the original
+
+Stay put if you work on Windows and your servers speak SFTP, SCP, FTP, WebDAV or S3. No other free client on this list offers the same mix of graphical interface, protocols and automation. If something has gone wrong and that is why you were looking around, check the [error fixes](errors.html) first; most problems come from server settings, not the client. The current installer is on the [download page](download.html).
+
+
+## FAQ
+
+**What is the best WinSCP alternative for Mac?**
+
+Cyberduck and FileZilla are the usual picks. Cyberduck handles more cloud services in its free version, while FileZilla gives you two side by side panels like the Commander layout on Windows.
+
+**Is there a WinSCP for Linux?**
+
+No, there is no native Linux version. FileZilla runs on Linux, and the GNOME and KDE file managers can open sftp:// addresses for simple transfers.
+
+**Which free alternative includes a terminal?**
+
+MobaXterm Home edition and Bitvise SSH Client both combine an SSH terminal with an SFTP file browser on Windows. Both have free versions.
+
+**Can I replace it with tools built into Windows?**
+
+Partly. Windows 10 and 11 include the OpenSSH client, which provides the sftp and scp commands. It has no graphical interface, synchronization or editor.
+
+**Which alternative supports Google Drive?**
+
+Cyberduck and rclone can both connect to Google Drive. FileZilla supports it only in its paid Pro edition.
+
+## Sources
+
+- [WinSCP documentation: introduction, Windows client and PuTTY integration](https://winscp.net/eng/docs/introduction)
+- [WinSCP documentation: feature index](https://winscp.net/eng/docs/feature_index)
+- [WinSCP official site: supported protocols](https://winscp.net/eng/index.php)
+
+
+---
+
+# WinSCP errors: fixes for connection, host key and transfer problems
+
+URL: https://winscp-app.github.io/errors.html
+Updated: 2026-11-24
+
+Most WinSCP errors fall into a few groups: the server refuses the login, the host key is unknown, a shell startup script breaks SFTP, or an automated job behaves differently from the graphical client. This page lists the common messages from the vendor's FAQ and what usually fixes them.
+
+## Key facts
+
+- Checked: 2026-11-24
+- Check first: Host, port, protocol, user
+- Too large SFTP packet: Startup script prints text
+- Error code 4: Generic failure from server
+- Error 127: Command not found (SCP)
+- Scheduler failures: Host key and settings per user
+
+Most WinSCP errors come from the server or the session settings, not from the program. Check the host name, port, protocol and credentials first, and confirm the host key fingerprint with your administrator. A 'Received too large SFTP packet' message means a shell startup script on the server prints text. Scripts that work by hand but fail in Task Scheduler usually lack the stored host key, so pass the key in the script.
+
+## Before you chase a specific error
+
+Many WinSCP errors disappear after a quick check of the basics. The vendor's FAQ has an entry for a pattern that comes up often: the program works on one machine, network or user account and fails on another. That almost always points to a difference in environment, such as a firewall, a proxy, a missing stored host key or settings saved under a different Windows user.
+Run through this list first, and turn on session logging (the feature index lists logging, including XML logs) so you can see the exact step that fails.
+- Host name or IP address typed correctly
+- Protocol matches the server: SFTP and FTP are different services
+- Port matches: 22 for SFTP and SCP, 21 for FTP, unless your host says otherwise
+- User name and password or key come from the server's administrator
+- You are on the current release; updates arrive every one to three months
+
+## Cannot connect or log in
+
+If the connection times out, the server is not reachable on that port from your network. Check the host, the port and any firewall or VPN between you and the server. If the connection is refused, nothing is listening on that port; a common cause is choosing FTP for a server that only runs SFTP, or the other way round.
+If the login is rejected, the problem is the account. The vendor cannot reset passwords; only the server's administrator can. When other clients connect and this one does not, compare the protocol, port, encryption and authentication settings side by side. The FAQ has an entry for exactly this case. The [connection guide](connect-sftp.html) shows where each setting sits in the Login dialog.
+
+## Host key warnings
+
+The first time you connect to an SSH server, the program shows the server's host key fingerprint and asks whether to trust it. This is normal. Compare the fingerprint with the one your administrator or hosting provider publishes, then accept it so it is stored.
+If the warning says the key has changed for a server you have used before, stop and ask. A reinstalled or migrated server gets a new key, and that is harmless. A change you cannot explain may mean someone is intercepting the connection.
+
+## Received too large SFTP packet
+
+This message appears during login when something on the server prints text at the start of the session, usually an echo or a banner in a shell startup file such as .bashrc or .profile. The SFTP client reads that text as the start of a protocol packet and reports an impossible size.
+The fix is on the server: make the startup script print only in interactive shells, or remove the output. The program itself has no setting for this, because the problem is in the data the server sends.
+
+## Transfer errors
+
+- Error code 4: a generic failure code that the SFTP server returns. The message that follows usually names the real cause, such as permission denied or a full disk.
+- Error 127 when copying: with SCP, the server's shell reports a command it cannot find. Switch the session to SFTP or ask the administrator to fix the server's shell environment.
+- Upload succeeds but setting permissions or the timestamp fails: you can write to the file but do not own it. Turn off preserving the timestamp and setting permissions in the transfer settings.
+- Files larger than 4 GB fail: the protocols handle large files, so check the local drive (FAT32 cannot hold them) and the server's limits.
+- Empty files or broken line breaks: check the transfer mode. Use binary for anything that is not plain text.
+- Changes do not show in the browser: the web server or the browser is serving a cached copy. Reload without the cache.
+
+## Scripts that fail outside the graphical client
+
+A script that runs from your desktop but fails or hangs under Task Scheduler, SSIS or another service is the most common automation question in the vendor's FAQ. The service usually runs as a different Windows account. That account has no stored host key and none of the settings you saved in the graphical client, so the script waits for a confirmation that nobody can give.
+Pass the host key in the open command with the `-hostkey` switch, and put every setting the script needs into the script itself. The Login dialog command Manage > Generate Session URL/Code produces a correct open line for you. To find out why a script failed, check its exit code and write a log file on every run.
+
+## When to update or switch
+
+Many fixes arrive in regular releases, so install the current version from the [download page](download.html) before you spend long on an old bug. If the real problem is a service the program does not support, such as Google Drive, look at the [alternatives](alternatives.html) instead. For a wider view of the program's strengths and limits, read the [review](review.html).
+
+## FAQ
+
+**What does a connection timeout mean in WinSCP?**
+
+The program could not reach the server on the given port. Check the host name, the port and any firewall or VPN in between. Also check that the server really runs the protocol you chose.
+
+**What is error code 4?**
+
+It is a generic failure code that the SFTP server sends back. Read the message under it in the error box or the log; it usually says permission denied, file not found or no space left.
+
+**Why do I get 'Received too large SFTP packet'?**
+
+A shell startup script on the server prints text when the session starts, and that text breaks the SFTP protocol. Remove the output or limit it to interactive shells.
+
+**Why does my script work by hand but fail in Task Scheduler?**
+
+The scheduled task runs under another Windows account that has no stored host key or saved settings. Pass the host key with the -hostkey switch and keep every needed setting inside the script.
+
+**Can I undelete a file I removed on the server?**
+
+No. A file deleted on a remote server is gone unless the server keeps backups. To protect yourself in future, the preferences can move deleted remote files to a recycle bin folder on the server instead.
+
+**Can the vendor reset my server password?**
+
+No. The password belongs to an account on your server, so only its administrator or your hosting provider can reset it.
+
+## Sources
+
+- [WinSCP documentation: FAQ on connecting, transfers and scripting](https://winscp.net/eng/docs/faq)
+- [WinSCP documentation: support and release schedule](https://winscp.net/eng/docs/support)
+- [WinSCP documentation: feature index, logging](https://winscp.net/eng/docs/feature_index)
